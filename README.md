@@ -127,6 +127,11 @@ This theme has support for the [Related Posts plugin](https://github.com/getpeli
 
 This theme supports including IPython notebooks through the [Liquid Tags plugin](https://github.com/getpelican/pelican-plugins/tree/master/liquid_tags). If you enable the plugin, the theme will automatically include the right CSS/JS to make the notebooks work.
 
+To enable this---in addition to add `liquid_tags.notebook` to the `PLUGINS` list of plugins---you'll need to add the following line to your `pelicanconf.py`
+
+    EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8')
+
+
 ### Favicon
 
 Set the `FAVICON` option in your `pelicanconf.py`. For example: `FAVICON = 'images/favicon.png'`
